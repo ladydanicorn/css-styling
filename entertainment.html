@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* >Navigation Menu */
+        .nav-menu {
+            background-color: #2d2d2d;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: #9e9e9e;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #4a4a4a;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .cta-button {
+            display: block;
+            text-align: center;
+            padding: 12px 24px;
+            background-color: #4a4a4a;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #666666;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .feedback-form, .registration-form {
+            background-color: #2d2d2d;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #9e9e9e;
+        }
+
+        .content-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #2d2d2d;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .content-table th {
+            background-color: #4a4a4a;
+            color: #ffffff;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .content-table td {
+            padding: 12px;
+            border-bottom: 1px solid #4a4a4a;
+        }
+
+        .content-table tr:nth-child(even) {
+            background-color: #333333;
+        }
+
+        .content-table tr:hover {
+            background-color: #3d3d3d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2018/06/Hereditary-Poster.jpg" alt="Movie Poster">
+            </div>
+            <div class="gallery-item">
+                <img src="https://amplifythenoise.com/wp-content/uploads/2023/02/qveen-herby-the-muse.jpeg" alt="Album Cover">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.newgamenetwork.com/thumbnailer.php?image=images/uploads/gallery/BaldursGate3/bgate3_12.jpg&type=Media_Large" alt="Game Screenshot">
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <a href="#" class="cta-button">Watch Now</a>
+            <a href="#" class="cta-button">Listen Here</a>
+            <a href="#" class="cta-button">Play Game</a>
+        </section>
+
+        <!-- Interactive Form for User Feedback -->
+        <section class="feedback-form">
+            <h2>Share Your Thoughts</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Submit Feedback</button>
+            </form>
+        </section>
+
+        <!-- User Registration Form -->
+        <section class="registration-form">
+            <h2>Create Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="reg-name">Full Name:</label>
+                    <input type="text" id="reg-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <button type="submit" class="cta-button">Register</button>
+            </form>
+        </section>
+
+        <!-- Styled Table -->
+        <section>
+            <h2>Upcoming Events</h2>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Movie Premier</td>
+                        <td>Dec 15, 2024</td>
+                        <td>Cinema City</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>Music Festival</td>
+                        <td>Dec 20, 2024</td>
+                        <td>Central Park</td>
+                        <td>Sold Out</td>
+                    </tr>
+                    <tr>
+                        <td>Game Launch</td>
+                        <td>Dec 25, 2024</td>
+                        <td>Virtual Event</td>
+                        <td>Coming Soon</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
